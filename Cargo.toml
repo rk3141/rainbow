@@ -1,5 +1,5 @@
 [package]
-name = "rainbow"
+name = "rainbow-text"
 version = "0.1.0"
 authors = ["Rishit Khandelwal <rishitkh@gmail.com>"]
 edition = "2018"
