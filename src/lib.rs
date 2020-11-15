@@ -1,6 +1,7 @@
 use std::io::{self, Write};
 
-use termcolor::{Color, ColorChoice, ColorSpec, StandardStream, WriteColor};
+use termcolor::{ ColorChoice, ColorSpec, StandardStream, WriteColor };
+pub use termcolor::Color;
 
 fn write_bgcolor(out: &str, color: Color) -> io::Result<()> {
     let mut stdout = StandardStream::stdout(ColorChoice::Always);

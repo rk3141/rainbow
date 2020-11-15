@@ -48,3 +48,23 @@ fn main() -> std::io::Result<()>
 }
 ```
 
+### Custom Rainbows!
+```rust
+use rainbow_text::{ Foreground, Rainbow, Color };
+
+fn main() -> std::io::Result<()>
+{
+    let rain = Rainbow::custom(
+        "Hello, World",
+        vec![
+            Color::Rgb(255,0,0),
+            Color::Rgb(0,255,0),
+            Color::Rgb(0,0,255),
+        ]
+    );
+    
+    rain.write()?;
+    
+    Ok(())
+}
+```
