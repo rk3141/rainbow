@@ -6,7 +6,7 @@ A crate for writing text in rainbow colors.
 
 ### Write text with foreground colors
 ```rust
-use rainbow_text::{ Foreground, Rainbow };
+use rainbow_text::Rainbow;
 
 fn main() -> std::io::Result<()>
 {
@@ -20,7 +20,7 @@ fn main() -> std::io::Result<()>
 
 ### Write text with background colors
 ```rust
-use rainbow_text::{ Background, Rainbow };
+use rainbow_text::Rainbow;
 
 fn main() -> std::io::Result<()>
 {
@@ -34,7 +34,7 @@ fn main() -> std::io::Result<()>
 
 ### Change the text
 ```rust
-use rainbow_text::{ ChangeText, Foreground, Rainbow };
+use rainbow_text::Rainbow;
 
 fn main() -> std::io::Result<()>
 {
@@ -50,7 +50,7 @@ fn main() -> std::io::Result<()>
 
 ### Custom Rainbows!
 ```rust
-use rainbow_text::{ Foreground, Rainbow, Color };
+use rainbow_text::{ Rainbow, Color };
 
 fn main() -> std::io::Result<()>
 {

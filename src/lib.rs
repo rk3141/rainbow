@@ -67,11 +67,8 @@ impl Rainbow
             ]
         }
     }
-}
 
-impl Background for Rainbow
-{
-    fn write_bg(&self) -> io::Result<()>
+    pub fn write_bg(&self) -> io::Result<()>
     {
         let mut minus = 0;
         for (index,ch) in self.text.chars().enumerate()
@@ -87,11 +84,8 @@ impl Background for Rainbow
         }
         Ok(())
     }
-}
 
-impl Foreground for Rainbow
-{
-    fn write(&self) -> io::Result<()>
+    pub fn write(&self) -> io::Result<()>
     {
         let mut minus = 0;
         for (index,ch) in self.text.chars().enumerate()
@@ -107,11 +101,8 @@ impl Foreground for Rainbow
         }
         Ok(())
     }
-}
 
-impl ChangeText for Rainbow
-{
-    fn change_text(&mut self, new_text: &str)
+    pub fn change_text(&mut self, new_text: &str)
     {
         self.text = String::from(new_text);
     }
