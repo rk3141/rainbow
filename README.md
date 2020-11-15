@@ -1,19 +1,50 @@
 # Rainbow
 
-### Functions
+A crate for writing text in rainbow colors.
 
-`write_rainbow_bg(text: &str)`
+# Examples
 
-`write_rainbow_fg(text: &str)`
-
-## Example
-
+### Write text with foreground colors
 ```rust
-use std::io;
+use rainbow_text::{ Foreground, Rainbow };
 
-fn main() -> io::Result<()>
+fn main() -> std::io::Result<()>
 {
-    rainbow::write_rainbow_fg("Hello, World")?;
+    let rain = Rainbow::default("Hello, World");
+    
+    rain.write()?;
+    
     Ok(())
 }
 ```
+
+### Write text with background colors
+```rust
+use rainbow_text::{ Background, Rainbow };
+
+fn main() -> std::io::Result<()>
+{
+    let rain = Rainbow::default("Hello, World");
+    
+    rain.write_bg()?;
+    
+    Ok(())
+}
+```
+
+### Change the text
+```rust
+use rainbow_text::{ ChangeText, Foreground, Rainbow };
+
+fn main() -> std::io::Result<()>
+{
+    let mut rain = Rainbow::default("Hello, World");
+    
+    rain.write()?;
+    rain.change_text("Rainbows!");
+    rain.write()?;
+    
+    Ok(())
+}
+```
+
