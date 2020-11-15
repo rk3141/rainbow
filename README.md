@@ -3,8 +3,9 @@
 ### Functions
 
 `write_rainbow_bg(text: &str)`
+
 `write_rainbow_fg(text: &str)`
-g
+
 ## Example
 
 ```rust
