@@ -12,7 +12,7 @@ use std::io;
 
 fn main() -> io::Result<()>
 {
-    rainbow::write_rainbow_fg("Hello, World");
+    rainbow::write_rainbow_fg("Hello, World")?;
     Ok(())
 }
 ```
