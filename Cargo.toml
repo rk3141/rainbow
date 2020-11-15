@@ -3,7 +3,8 @@ name = "rainbow"
 version = "0.1.0"
 authors = ["Rishit Khandelwal <rishitkh@gmail.com>"]
 edition = "2018"
-
+description = "Write text in rainbow colors"
+repository = "https://github.com/rishit-khandelwal/rainbow"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
