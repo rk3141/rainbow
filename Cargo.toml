@@ -1,6 +1,6 @@
 [package]
 name = "rainbow-text"
-version = "0.1.4"
+version = "0.1.5"
 authors = ["Rishit Khandelwal <rishitkh@gmail.com>"]
 edition = "2018"
 description = "Write text in rainbow colors"

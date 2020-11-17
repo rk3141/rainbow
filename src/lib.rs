@@ -50,7 +50,7 @@ impl Rainbow
         }
     }
 
-    pub fn write_bg(&self, text: String) -> io::Result<()>
+    pub fn write_bg(&self, text: &str) -> io::Result<()>
     {
         let mut minus = 0;
         for (index,ch) in text.chars().enumerate()
@@ -67,7 +67,7 @@ impl Rainbow
         Ok(())
     }
 
-    pub fn write(&self, text: String) -> io::Result<()>
+    pub fn write(&self, text: &str) -> io::Result<()>
     {
         let mut minus = 0;
         for (index,ch) in text.chars().enumerate()
