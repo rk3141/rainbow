@@ -10,9 +10,9 @@ use rainbow_text::Rainbow;
 
 fn main() -> std::io::Result<()>
 {
-    let rain = Rainbow::default("Hello, World");
+    let rain = Rainbow::default();
     
-    rain.write()?;
+    rain.write("Hello, World")?;
     
     Ok(())
 }
@@ -24,25 +24,9 @@ use rainbow_text::Rainbow;
 
 fn main() -> std::io::Result<()>
 {
-    let rain = Rainbow::default("Hello, World");
+    let rain = Rainbow::default();
     
-    rain.write_bg()?;
-    
-    Ok(())
-}
-```
-
-### Change the text
-```rust
-use rainbow_text::Rainbow;
-
-fn main() -> std::io::Result<()>
-{
-    let mut rain = Rainbow::default("Hello, World");
-    
-    rain.write()?;
-    rain.change_text("Rainbows!");
-    rain.write()?;
+    rain.write_bg("Hello, World")?;
     
     Ok(())
 }
@@ -55,7 +39,6 @@ use rainbow_text::{ Rainbow, Color };
 fn main() -> std::io::Result<()>
 {
     let rain = Rainbow::custom(
-        "Hello, World",
         vec![
             Color::Rgb(255,0,0),
             Color::Rgb(0,255,0),
@@ -63,7 +46,7 @@ fn main() -> std::io::Result<()>
         ]
     );
     
-    rain.write()?;
+    rain.write("Hello, World")?;
     
     Ok(())
 }
